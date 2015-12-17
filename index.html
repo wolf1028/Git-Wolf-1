@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>generar lista con Jquery por medio de los titulos, tambien creados con Jquery</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+
+$(document).ready(function(e) {
+	var contar = 0;
+    $("h1").each(function(index, element) {
+		contar++;
+        $(this).attr("id", "Titulo" + contar);
+		$("#Menu").append("<li><a href='#Titulo" + contar + "'>" + $(this).html() + "</a></li>");
+    });
+});
+</script>
+
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body{
+	font-family: 'Open Sans', sans-serif;
+	}
+h1{
+	text-align:center;
+	font-weight:bold;
+	}
+
+</style>
+</head>
+<body>
+    <div class="container">
+    
+      <nav id="navs">
+            <ul id="Menu" class="nav nav-pills">
+            </ul>
+        </nav>
+    
+      <section class="row">
+       	<h1>Titulo Uno</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
+      </section>
+        
+      <section class="row">
+       	<h1>Titulo Dos</h1>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
+      </section>
+        
+      <section class="row">
+        	<h1>Titulo Tres</h1>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
+        </section>
+        
+      <section class="row">
+
+        	<h1>Titulo Cuatro</h1>
+             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
+        </section>
+          
+	<section class="row">
+        	<h1>Titulo Cinco</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
+        </section>
+        
+	</div>
+ <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
