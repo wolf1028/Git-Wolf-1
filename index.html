@@ -4,19 +4,18 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>generar lista con Jquery por medio de los titulos, tambien creados con Jquery</title>
+<title>mostrar y ocultar logo, cambiar titulo y color con Jquery</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="js/jquery-1.11.3.min.js"></script>
 <script>
 
 $(document).ready(function(e) {
-	var contar = 0;
-    $("h1").each(function(index, element) {
-		contar++;
-        $(this).attr("id", "Titulo" + contar);
-		$("#Menu").append("<li><a href='#Titulo" + contar + "'>" + $(this).html() + "</a></li>");
+    $("#logo").delay(3000).show("slow").click(function(e) {
+        $(this).hide("slow")
+		$("h1").html("Cambio de Titulo y de color").css("color", "#00426C");
     });
 });
+
 </script>
 
 <style>
@@ -28,44 +27,64 @@ h1{
 	text-align:center;
 	font-weight:bold;
 	}
-
+#logo{
+	position:fixed;
+	top:50%;
+	right:0;
+	text-align:right;
+	background:#0063A2;
+	padding:20px;
+	width:150px;
+	border-radius:0px 20px 0 20px;
+	color:#FFFFFF;
+	display:none;
+	}
 </style>
+
 </head>
 <body>
-    <div class="container">
-    
-      <nav id="navs">
-            <ul id="Menu" class="nav nav-pills">
-            </ul>
-        </nav>
-    
+    <div class="container">  
+      <h1>Titulo</h1>
+      
       <section class="row">
-       	<h1>Titulo Uno</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
-      </section>
-        
-      <section class="row">
-       	<h1>Titulo Dos</h1>
-         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
-      </section>
-        
-      <section class="row">
-        	<h1>Titulo Tres</h1>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
-        </section>
-        
-      <section class="row">
+      
+      <article class="col-md-4">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <a href="https://www.facebook.com/">Nam semper</a> ligula a tellus ullamcorper, eu vulputate enim rhoncus. Quisque convallis, est eu cursus luctus, justo orci efficitur tellus, nec tincidunt odio metus sit amet urna. Nullam feugiat elit ligula, vitae ultricies diam condimentum a. Pellentesque a elit non sem pellentesque vestibulum vitae ac leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at nulla metus. Proin nibh tortor, pharetra non dui maximus, bibendum aliquet diam. Sed rhoncus lobortis diam, at volutpat massa venenatis ut.</p>
+      </article>
+      
+	 <article class="col-md-4">
+<p>Sed sapien enim, ultricies eu urna pellentesque, faucibus fringilla metus. Pellentesque efficitur sapien ut rutrum maximus. Aliquam erat volutpat. Donec <a href="https://www.facebook.com/">lacinia</a> velit a nulla rhoncus, a malesuada ante mollis. In hac habitasse platea dictumst. Nam congue metus id est tristique varius. Duis vel vulputate lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean pharetra posuere erat. Sed justo diam, faucibus nec tellus a, ultricies aliquet mauris. Cras varius purus ut sapien sagittis, dictum hendrerit dui dapibus. Duis leo ipsum, bibendum in nisl quis, lacinia auctor lorem.</p>
+</article>
 
-        	<h1>Titulo Cuatro</h1>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
-        </section>
-          
-	<section class="row">
-        	<h1>Titulo Cinco</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
-        </section>
-        
+
+    <article class="col-md-4">
+<p>Quisque urna turpis, hendrerit sed ante faucibus, dignissim tincidunt ante. Sed fringilla lacus eget lorem gravida tempus. Nunc interdum commodo molestie. Nunc vitae placerat metus. Donec lobortis vestibulum ligula, vitae vulputate tellus porttitor non. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus eu maximus leo, a fringilla ante. Fusce nisi nisi, lacinia sit amet ultricies quis, euismod ac augue. Vestibulum congue dui sit amet nibh pellentesque, sit amet maximus elit varius. Morbi mattis maximus turpis, vitae egestas elit lacinia ac. Vivamus blandit hendrerit lobortis. Fusce mi odio, finibus vel viverra accumsan, iaculis ac erat.</p>
+</article>
+</section>
+
+
+<section class="row">
+
+     <article class="col-md-4">
+<p>Integer hendrerit commodo consectetur. Integer nec mi non leo vehicula egestas. Etiam bibendum sem in varius aliquet. Etiam ut orci sit amet nunc facilisis scelerisque at vel mauris. Fusce elementum semper mattis. Ut porta velit nec placerat aliquet. Donec quis odio vel est vestibulum rutrum non varius ligula. Aliquam at tempus mauris. Donec malesuada quam magna, eget vestibulum turpis pellentesque nec. Quisque vel scelerisque odio. Nullam consectetur ut lorem id porta. Proin egestas dolor lacinia rutrum dapibus. Cras eu diam a dui mattis scelerisque. Nunc facilisis mi ut ante finibus pellentesque. Aenean dignissim porttitor eleifend.</p>
+</article>
+
+     <article class="col-md-4">
+<p>Integer hendrerit commodo consectetur. Integer nec mi non leo vehicula egestas. Etiam bibendum sem in varius aliquet. Etiam ut orci sit amet nunc facilisis scelerisque at vel mauris. Fusce elementum semper mattis. Ut porta velit nec placerat aliquet. Donec quis odio vel est vestibulum rutrum non varius ligula. Aliquam at tempus mauris. Donec malesuada quam magna, eget vestibulum turpis pellentesque nec. Quisque vel scelerisque odio. Nullam consectetur ut lorem id porta. Proin egestas dolor lacinia rutrum dapibus. Cras eu diam a dui mattis scelerisque. Nunc facilisis mi ut ante finibus pellentesque. Aenean dignissim porttitor eleifend.</p>
+</article>
+
+     <article class="col-md-4">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper ligula a tellus ullamcorper, eu vulputate enim rhoncus. Quisque convallis, est eu cursus luctus, justo orci efficitur tellus, nec tincidunt odio metus sit amet urna. Nullam feugiat elit ligula, vitae ultricies diam condimentum a. Pellentesque a elit non sem pellentesque vestibulum vitae ac leo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Donec at nulla metus. Proin nibh tortor, pharetra non dui maximus, bibendum aliquet diam. Sed rhoncus lobortis diam, at volutpat massa venenatis ut.</p>
+</article>
+</section>
+
 	</div>
+
+    
+    <div id="logo">
+    <h2>Dale Click Aqui</h2>
+    <p>cambia el nombre del titulo y el color; ademas oculta el logo</p>
+    </div>
  <script src="js/bootstrap.min.js"></script>
 </body>
 </html>
