@@ -1,5 +1,5 @@
 # Git-Wolf-Jquery1 // Utilizanddo Jquery
-Primero Proyecto
+Primer Proyecto
 
 	//Agregar id a cada h2 y agregar una lista de estos id en el nav
 	
