@@ -1,7 +1,9 @@
 # Git-Wolf-Jquery1 // Utilizanddo Jquery
+
 Primer Proyecto
+
 	//Banner de Imagenes con animacion, agrega un <div> con wrapInner, captura la altura del img:first-child y lo ultiliza para
-	uzarlo como la altura del #contenido_banner;
+	uzarlo como la altura del #contenido_banner
 	
 	//Agregar id a cada h2 y agregar una lista de estos id en el nav
 	
