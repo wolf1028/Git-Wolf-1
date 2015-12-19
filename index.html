@@ -5,79 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Repasando Jquery</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="js/jquery-1.11.3.min.js"></script>
-<script>
-
-$(document).ready(function(e) {
-	
-	//Agregar id a cada h2 y agregar una lista de estos id en el nav
-	
-	var contar = 0;
-    $("h2").each(function(index, element) {
-		contar++;
-        $(this).attr("id", "Titulo" + contar);
-		$("#Menu").append("<li><a href='#Titulo" + contar + "'>" + $(this).html() + "</a></li>");
-    });
-	
-	//Aparece el logo en 3 segundos y dandole clcik encima del logo desaparece y cambia de color y contenido al <h1>  
-
-	$("#logo").delay(3000).show("slow").click(function(e) {
-        $(this).hide("slow")
-		$("h1").html("Cambio de Titulo y de color").css("color", "#00426C");
-    });
-	
-	/*Indicar que los hipervinculos con la direccion "https://www.facebook.com" se van abrir en otra pagina,
-	lo transforma en letras mayusculas, le agrega una imagen de fondo icon_facebook y cuando el mouse esta sobre el 					    hipervinculo aparezca el titulo "FaceBook" */
-	
-	 $("a[href^='https://www.facebook.com']").attr("title","FaceBook").attr("target","_blank")
-  .css("text-transform","uppercase")
-  .css("background","url(img/icon_facebook.png)")
-  .css("background-repeat","no-repeat")
-  .css("padding-left","25px")
-	
-});
-</script>
-
-<style>
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-body{
-	font-family: 'Open Sans', sans-serif;
-	}
-h1{
-	text-align:center;
-	font-weight:bold;
-	}
-	
-h2{
-	text-align:center;
-	font-weight:bold;
-	}
-#logo{
-	position:fixed;
-	top:50%;
-	right:0;
-	text-align:right;
-	background:#0063A2;
-	padding:20px;
-	width:150px;
-	border-radius:0px 20px 0 20px;
-	color:#FFFFFF;
-	display:none;
-	}
-
-</style>
+ <script src="js/bootstrap.min.js"></script>
+<script src="js/codigo.js"></script>
 </head>
-<body>
-    <div class="container">
-      <nav id="navs">
+<body> 
+   <nav id="navs">
             <ul id="Menu" class="nav nav-pills">
             </ul>
         </nav>
-        
-        <h1> TITULO PRINCIPAL</h1>
-
-      <section class="row">
+    <div class="container-fluid">    
+     
+           
+ 	        <div id="logo">
+    <h3>Dale Click Aqui</h3>
+    <p>cambia el nombre del titulo y el color; ademas oculta el logo</p>
+    </div>
+    
+      <section id="articulos" class="row">
+      <div class="jumbotron">
+              <h1> TITULO PRINCIPAL</h1>
+              </div>
             <article class="col-md-4">
 
        	<h2>Titulo Uno</h2>
@@ -96,26 +46,23 @@ h2{
                    <p>Sed sapien enim, ultricies eu urna pellentesque, faucibus fringilla metus. Pellentesque efficitur sapien ut rutrum maximus. Aliquam erat volutpat. Donec <a href="https://www.facebook.com/">lacinia</a> velit a nulla rhoncus, a malesuada ante mollis. In hac habitasse platea dictumst. Nam congue metus id est tristique varius. Duis vel vulputate lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean pharetra posuere erat. Sed justo diam, faucibus nec tellus a, ultricies aliquet mauris. Cras varius purus ut sapien sagittis, dictum hendrerit dui dapibus. Duis leo ipsum, bibendum in nisl quis, lacinia auctor lorem.</p>
         </article></section>
         
-      <section class="row">
-      <article class="col-md-6">
-
-        	<h2>Titulo Cuatro</h2>
-             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
-        </article>
-          
-          <article class="col-md-6">
-
-        	<h2>Titulo Cinco</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ipsum erat, finibus vitae justo at, porta condimentum dolor. Aliquam cursus nulla sed dolor lobortis, vitae finibus nunc rutrum. Morbi dolor leo, scelerisque tincidunt pulvinar ac, dapibus in ex. Praesent facilisis, sem vulputate elementum posuere, felis est euismod nisl, dignissim bibendum ipsum est quis arcu. Fusce tortor erat, sodales id consequat id, dictum vitae velit. Integer volutpat aliquam tempus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse vestibulum est nec sem pretium ultrices. Vestibulum hendrerit, neque sodales interdum ultrices, ex erat maximus elit, sit amet dignissim tortor eros sit amet nulla. Mauris facilisis libero auctor dolor varius, eu hendrerit augue pharetra. Suspendisse posuere varius purus, nec consectetur tortor finibus vitae. Mauris nec sem convallis sem fringilla aliquam ac eget nisi.</p>
-       </article>
-        </section>
-        
-	</div> 
-    
-    <div id="logo">
-    <h3>Dale Click Aqui</h3>
-    <p>cambia el nombre del titulo y el color; ademas oculta el logo</p>
+            <section id="banner" class="row">
+    <div id="contenido_banner">
+    <img src="img/basket.jpg" alt=""/>
+    <img src="img/africa.jpg" alt=""/>
+    <img src="img/cabana.jpg" alt=""/>
+    <img src="img/campamento.jpg" alt=""/>
+    <img src="img/catarata.jpg" alt=""/>
+    <img src="img/chimpance.jpg" alt=""/>
+    <img src="img/elefantes.jpg" alt=""/>
+    <img src="img/macchupicchu.jpg" alt=""/>
+    <img src="img/viajero.jpg" alt=""/>
     </div>
- <script src="js/bootstrap.min.js"></script>
+    </section> 
+    
+	</div>
+    
+
+    
 </body>
 </html>

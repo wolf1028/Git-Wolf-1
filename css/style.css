@@ -1,0 +1,41 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body{
+	font-family: 'Open Sans', sans-serif;
+	}
+	
+#contenido_banner{
+	overflow:hidden;	
+	position:relative;
+	}
+#contenido_banner img{
+	width:100%;
+	height:auto;
+	}
+
+#contenido_img{
+	position:absolute;
+	top:0;
+	left:0;
+	}
+h1{
+	text-align:center;
+	font-weight:bold;
+	}
+	
+h2{
+	text-align:center;
+	font-weight:bold;
+	}
+#logo{
+	position:fixed;
+	top:50%;
+	right:0;
+	text-align:right;
+	background:#0063A2;
+	padding:20px;
+	width:150px;
+	border-radius:0px 20px 0 20px;
+	color:#FFFFFF;
+	display:none;
+	z-index:10000;
+	}
