@@ -1,8 +1,53 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+@keyframes animate {
+    0%   {margin-left: -1000px;}
+	50%   {margin-left: 200px;}
+}
+@media (max-width:1500px){
+	#imagen_centro h3{
+		font-size:50px;
+		}
+	#form input,form textarea{
+		width:400px;
+		max-width:400px;
+		}
+	}
+@media (max-width:930px){
+	#imagen_centro h3{
+		font-size:30px;
+		}
+		#form input,form textarea{
+		width:300px;
+		max-width:300px;
+		}
+	}
+@media (max-width:760px){
+	#imagen_centro h3{
+		font-size:20px;
+		}
+	#form input,form textarea{
+		width:200px;
+		max-width:200px;
+		}
+		
+	}
+/*100%   margin-left: 0px;*/
+
 body{
 	font-family: 'Open Sans', sans-serif;
 	}
-	
+#fotos figure{
+	margin:0;
+	padding:0;
+	overflow:hidden;
+	}
+#fotos figure img{
+	transition:ease-in-out .5s all;
+	}	
+#fotos figure img:hover{
+	transform:scale(2,2) rotate(15deg); 
+	}
 #contenido_banner{
 	overflow:hidden;	
 	position:relative;
@@ -38,4 +83,141 @@ h2{
 	color:#FFFFFF;
 	display:none;
 	z-index:10000;
+	}
+#articulos{
+	position:relative;
+	background:#eee;
+	}
+#bird_rojo{
+	height:128px;
+	width:128px;
+	display:none;
+	position:absolute;
+	background:url(../img/bird_rojo.png);
+	top:5%;
+	left:8%;
+	}
+#bird_celeste{
+	height:128px;
+	width:128px;
+	display:none;
+	position:absolute;
+	background:url(../img/bird_celeste.png);
+	animation-name:animate;
+	animation-duration:2s;
+	}
+#bird_negro{
+	height:128px;
+	width:128px;
+	display:none;
+	position:absolute;
+	background:url(../img/bird_negro.png);
+	}
+#imagen_centro{
+ 	background:url(../img/logo1.png),url(../img/logo2.png), url(../img/banner-anuncio.jpg);
+	background-repeat:no-repeat;
+	background-position:1% 50%,99% 50%,50% 50%; 
+	position:relative;
+	text-align:center;
+	padding:40px;
+	}
+
+.redes_sociales{
+	position:absolute;
+	width:100%;
+	top:-25px;
+	left:0;
+	}
+.redes{
+	list-style:none;
+	background:#FFFFFF;
+	display:inline-block;
+	margin:0;
+	padding:10px;
+	border-radius:30px;
+	}
+.redes li{
+	float:left;
+	}
+.redes li a{
+	height:33px;
+	width:33px;
+	display:block;
+	background-image:url(../img/sprites.png);
+	transition:ease-in-out 0.5s all;
+	}
+.facebook{
+	background-position:0 -171px;
+	}
+.twitter{
+	background-position:-43px -171px;
+	}
+.google{
+	background-position:-86px -171px;
+	}
+.youtube{
+	background-position:-129px -171px;
+	}
+	
+.facebook:hover{
+	background-position:0 -214px;
+	}
+.twitter:hover{
+	background-position:-43px -214px;
+	}
+.google:hover{
+	background-position:-86px -214px;
+	}
+.youtube:hover{
+	background-position:-129px -214px;
+	}
+#formulario{
+	padding:20px;
+	text-align:center;
+	margin-top:20px;
+	margin-bottom:20px;
+	background:#eee;
+	}
+	/*
+.form{
+	display:table;
+	margin-left:auto;
+	margin-right:auto;
+	}*/
+#form h3{
+	font-size:36px;
+	}
+#form label{
+	display:block;
+	}
+#form input:focus,
+#form textarea:focus{
+	border-bottom:solid 5px #F90;
+	}
+#form input,
+#form textarea{	
+	padding:10px;
+	border:none;
+	border-bottom:solid 5px #ccc;
+	background-color:transparent;
+	outline:none;
+	font:inherit;/* hereda las propiedades de su objeto padre */
+	transition:all ease-in-out .5s;
+	max-height:150px;
+	}
+#art{
+	margin-top:20px;
+	margin-bottom:20px;
+	}
+#form input[type=submit]{
+	border:none;
+	background-color:#5F5448;
+	color:#D9C8B4;
+	width:150px;
+	transition:all ease-in-out .5s;
+	}	
+#form input[type=submit]:hover{
+	background-color: #A8C545;
+    color: #FFFFFF;
+	cursor:pointer;
 	}
