@@ -32,7 +32,7 @@ $(document).ready(function(e) {
 	//Aparece el logo en 3 segundos y dandole clcik encima del logo desaparece y cambia de color y contenido al <h1>  
 	$("#logo").delay(5000).show("slow").click(function(e) {
         $(this).hide("slow")
-		$("h1").html("Cambio de Titulo y de color").css("color", "#00426C");
+		$("h1").html("Cambio de Titulo y de color").css("color", "#553300");
     });
 	
 	/*Indicar que los hipervinculos con la direccion "https://www.facebook.com" se van abrir en otra pagina,
@@ -44,9 +44,8 @@ $(document).ready(function(e) {
   .css("background-repeat","no-repeat")
   .css("padding-left","25px")
   
-  
     var art_top = $("#articulos").offset().top;  // articulos top
-	var art_left = $("#articulos").offset().left; // carticulos left
+	var art_left = $("#articulos").offset().left; // articulos left
 	var art_height = $("#articulos").height();   // articulos height
 	var art_width = $("#articulos").width();     // articulos width
 	var height_bird = $("#bird_rojo").height(); // muñeco height

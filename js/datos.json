@@ -1,0 +1,55 @@
+[
+	{
+		"nombres":"Christel",
+		"curso":"Matematica",
+		"fotos":"fotos/foto1.jpg"		
+	},
+	
+	{
+		"nombres":"Steve",
+		"curso":"Lenguaje",
+		"fotos":"fotos/foto10.jpg"
+	},
+	
+	{
+        "nombres":"Brunela",
+        "curso":"Ingles",
+        "fotos":"fotos/foto2.jpg" 
+     },
+	 
+     {
+        "nombres":"Rita",
+        "curso":"POO",
+        "fotos":"fotos/foto3.jpg"  
+     },
+	 
+     {
+        "nombres":"Peter",
+        "curso":"Estadistica",
+        "fotos":"fotos/foto4.jpg"  
+     },
+	 
+     {
+        "nombres":"Clark",
+        "curso":"Trigonometria",
+        "fotos":"fotos/foto5.jpg" 
+     },
+	 
+     {
+        "nombres":"Tony",
+        "curso":"Fisica",
+        "fotos":"fotos/foto6.jpg"  
+     },
+	 
+     {
+        "nombres":"Bruce",
+        "curso":"Quimica",
+        "fotos":"fotos/foto7.jpg"  
+     },
+	 
+     {
+        "nombres":"Andy",
+        "curso":"Algebra",
+        "fotos":"fotos/foto11.jpg"  
+     }
+]

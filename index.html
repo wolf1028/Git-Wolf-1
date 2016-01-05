@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" ng-app="WolF">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +8,24 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <script src="js/jquery-1.11.3.min.js"></script>
- <script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="js/codigo.js"></script>
+<script src="js/angular.min.js"></script>
+<script>
+var wolf = angular.module("WolF", []);
+wolf.controller("Controlador-WolF", ["$scope", "$http", function($scope, $http){
+	$http.get("js/datos.json").success(function(data){
+		$scope.personas = data;
+		});
+	}]);
+</script>
 </head>
 <body> 
    <nav id="navs">
             <ul id="Menu" class="nav nav-pills">
             </ul>
         </nav>
-    <div class="container-fluid" style="background: rgb(85, 51, 0)";
->    
-     
+    <div class="container-fluid" style="background: #553300";>    
            
  	        <div id="logo">
     <h3>Dale Click Aqui</h3>
@@ -147,9 +154,28 @@
     </figure>
     </section>
     
-	</div>
+       
+      
+    <section id="caja-titulo" class="container" ng-controller="Controlador-WolF" style="padding:20px;">
+    <div id="bienvenido">
+        	<h3>Buscar Profesor o Curso :</h3> 
+		      <input type="text" ng-model="BuscarNombre" placeholder="Digita un Nombre o Curso">
+               <div class="container">               
+           <select ng-model="campoOrdenar">
+            <option value="nombres">Nombres</option>
+            <option value="curso">Curso</option>
+            </select>
+          </select>     
+      </div>
+      
+        <figure class="col-md-4" ng-repeat="persona in personas | filter:BuscarNombre | orderBy:campoOrdenar">
+        	<img src="{{persona.fotos}}" class="img-responsive">
+            <span>{{persona.nombres}}</span>
+            <span>{{persona.curso}}</span>
+        </figure>
+    </section>
     
-
+    </div>
     
 </body>
 </html>

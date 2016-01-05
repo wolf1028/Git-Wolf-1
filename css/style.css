@@ -8,7 +8,7 @@
 	#imagen_centro h3{
 		font-size:50px;
 		}
-	#form input,form textarea{
+	#form input, #form textarea, #bienvenido input{
 		width:400px;
 		max-width:400px;
 		}
@@ -17,7 +17,7 @@
 	#imagen_centro h3{
 		font-size:30px;
 		}
-		#form input,form textarea{
+		#form input, #form textarea, #bienvenido input{
 		width:300px;
 		max-width:300px;
 		}
@@ -26,7 +26,7 @@
 	#imagen_centro h3{
 		font-size:20px;
 		}
-	#form input,form textarea{
+	#form input, #form textarea, #bienvenido input{
 		width:200px;
 		max-width:200px;
 		}
@@ -41,6 +41,10 @@ body{
 	margin:0;
 	padding:0;
 	overflow:hidden;
+	}
+#caja-titulo figure{
+	margin:0;
+	padding:15px;
 	}
 #fotos figure img{
 	transition:ease-in-out .5s all;
@@ -86,7 +90,9 @@ h2{
 	}
 #articulos{
 	position:relative;
-	background:#eee;
+	}
+#articulos article{
+	color:#FFFFFF;
 	}
 #bird_rojo{
 	height:128px;
@@ -178,12 +184,6 @@ h2{
 	margin-bottom:20px;
 	background:#eee;
 	}
-	/*
-.form{
-	display:table;
-	margin-left:auto;
-	margin-right:auto;
-	}*/
 #form h3{
 	font-size:36px;
 	}
@@ -220,4 +220,31 @@ h2{
 	background-color: #A8C545;
     color: #FFFFFF;
 	cursor:pointer;
+	}
+#bienvenido{
+	 color:#FFFFFF;
+	 text-align:center;
+	 padding-bottom:20px;
+	}
+#bienvenido input{
+	background-color:transparent;
+	border:none;
+	transition:ease-in-out .5s all;
+	padding:10px;
+	border-bottom:solid 5px #ccc;
+	outline:none;
+	}
+#bienvenido input:focus{
+	border-bottom:solid 5px #F90;
+	}
+#caja-titulo img{
+	width:100%;
+	height:auto;
+	}
+#caja-titulo span{
+	text-align:center;
+	font-size:36px;
+	display:inherit; 
+	color:#FFFFFF;
+	line-height:40px;
 	}
