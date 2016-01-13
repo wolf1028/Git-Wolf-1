@@ -1,4 +1,4 @@
-# Git-Wolf-Jquery1 // Utilizanddo Jquery
+# Git-Wolf-Jquery1 // Utilizanddo Jquery // AngularJS
 
 Primer Proyecto
 
